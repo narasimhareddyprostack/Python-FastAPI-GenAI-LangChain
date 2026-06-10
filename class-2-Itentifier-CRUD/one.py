@@ -1,0 +1,10 @@
+#variable 
+eid=101
+_eid=102
+e_id=103
+eid9=104
+#read
+print(eid)
+print(_eid)
+print(e_id)
+print(eid9)
