@@ -1,0 +1,13 @@
+Usage: Fetch all products data
+Rest API URL:https://dummyjson.com/products
+Method Type:GET
+Required Fields:None
+Access Type:Public 
+
+Invoke Above RestAPI and write all "category": "beauty" 
+products in product.json and product.csv
+with below properties
+
+Product_id  Name   Category  Price  Rating
+
+Note: with Error Handling, functions
