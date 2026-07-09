@@ -8,17 +8,14 @@ try:
                                   )
     cursor=dbcon.cursor()
     sql_st='''
-                create table employees(
-                eid int, 
-                ename varchar(32),
-                esal float,
-                age int
-                )
-
+           select *from employees
             '''
     cursor.execute(sql_st)
-    dbcon.commit()
-    print("New Table Created successfully")
+    employees=cursor.fetchall()
+    for emp in employees:
+        print(emp)
+    
+    #print("Data inserted successfully")
 
 except Exception as e:
     print(e)

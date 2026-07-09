@@ -1,25 +1,18 @@
 import mysql.connector
-
 try:
     dbcon=mysql.connector.connect(host='localhost',
                                   user='root',
                                   password='root',
-                                  database='12pm'
+                                  database='dbtwo'
                                   )
     cursor=dbcon.cursor()
     sql_st='''
-                create table employees(
-                eid int, 
-                ename varchar(32),
-                esal float,
-                age int
-                )
-
+           select *from users
             '''
     cursor.execute(sql_st)
-    dbcon.commit()
-    print("New Table Created successfully")
-
+    users=cursor.fetchall()
+    for user in users:
+        print(user)
 except Exception as e:
     print(e)
 finally:
